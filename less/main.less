@@ -1,0 +1,81 @@
+@background-color: #1F1717;
+@background-color-darker: #181010;
+@text-color: #FCF5ED;
+@highlight-color: #F4BF96;
+@error-color: #CE5A67;
+
+@font-face {
+    font-family: "Nova Mono";
+    src: url(/font/NovaMono-Regular.ttf) format("truetype");
+}
+
+html {
+    background-color: @background-color;
+    color: @text-color;
+    font-size: 22px;
+    font-family: "Nova Mono", sans-serif;
+    letter-spacing: 1.5px;
+}
+
+main.article-container {
+    width: 850px;
+    margin: auto;
+}
+
+strong {
+    color: @highlight-color;
+    font-size: 25px;
+    letter-spacing: 0px;
+}
+
+header {
+    border-bottom: 2px solid @highlight-color;
+    padding-top: 20px;
+    margin-bottom: 10px;
+    padding-bottom: 15px;
+}
+
+header > h1{
+    color: @text-color;
+    font-size: 22px;
+    font-family: "Nova Mono", sans-serif;
+    letter-spacing: 1.5px;
+    padding: 0px;
+    margin: 0px;
+}
+
+a,.fake-link {
+    color: @text-color;
+    text-decoration: underline;
+    cursor: pointer;
+}
+a:hover, .fake-link:hover{
+    color: @highlight-color;
+}
+code {
+    border: 2px dashed @error-color;
+    padding: 20px;
+    border-radius: 5px;
+    display:block;
+    background-color: @background-color-darker;
+}
+hr{
+    border-color: @highlight-color;
+}
+
+th{
+    text-align: left;
+}
+
+td+td, th+th{
+    padding-left: 20px;
+    text-align: left;
+}
+
+th+th{
+    border-left: 1px solid @highlight-color;
+}
+
+thead{
+    background-color: @background-color-darker;
+}
