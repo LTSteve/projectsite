@@ -1,4 +1,4 @@
-import {markdownLoader} from "/scripts/markdown-loader.js"
+import {markdownLoader} from "./markdown-loader.js"
 import { fakeLink, onClick as onFakeLinkClick } from "./markedExtensions/fakeLink.js"
 import { ajax } from "./helpers/ajax.js"
 

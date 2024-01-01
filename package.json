@@ -8,5 +8,13 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  },
+  "dependencies": {
+    "compile-less-cli": "^1.9.1",
+    "express": "^4.18.2",
+    "express-less": "^0.1.0"
+  }
 }
