@@ -43,14 +43,15 @@ const _inventory = (()=>{
         renderInventory();
     };
 
-    const removeItem = (name) => {
+    const removeItem = (name, flavorText) => {
         const inv = _getInventory();
         if(!inv[name]){
             return;
         }
+        flavorText = flavorText || "";
 
         delete inv[name];
-        alert("you dropped " + name);
+        alert("you dropped " + name + flavorText);
         _saveInventory(inv);
         renderInventory();
     };
