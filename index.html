@@ -14,7 +14,14 @@
         <article data-markdown-load="contentsettings.json">
         </article>
     </main>
-    <script type="module" src="scripts/main.js"></script>
+    <aside data-inventory>
+      <button class="inventory-button">INV</button>
+      <ul class="inventory-list"></ul>
+      <template id="inventory-item">
+        <li class="inventory-item"></li>
+      </template>
+    </aside>
+    <script type="module" src="scripts/main.js" type="text/javascript"></script>
     <script type="module" src="scripts/markdown-loader.js" type="text/javascript"></script>
   </body>
 </html>

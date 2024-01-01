@@ -9,7 +9,7 @@ This is a freeform space for me to blog, shitpost, create
 [Broken Link](asdf/12_31_2023.md)
 [An embeded Godot game?](goblin_camp.md)
 
-These posts are written in MD and parsed on the front end.
+These posts are written in MD and parsed on the front end
 
 They're not even sanitized. That's a security no-go, but I doubt you'll be entering any compromising info here so it's whatever
 
@@ -18,3 +18,5 @@ Commiting changes every time I update the site may seem icky, but separating cod
 *..vibe still in progress*
 
 ~*separating code and content*~
+
+`also this is not mobile friendly, but I'm not sure I care?`

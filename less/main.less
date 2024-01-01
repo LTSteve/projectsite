@@ -77,3 +77,43 @@ img{
     margin-top: 50px;
     margin-bottom: 50px;
 }
+
+button {
+    background:none;
+    border: 2px solid @highlight-color;
+    color: @highlight-color;
+    font-size: 22px;
+    font-family: "Nova Mono", sans-serif;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: @background-color-darker;
+}
+
+.inventory-button {
+    width:60px;
+    height:60px;
+}
+
+aside {
+    position:fixed;
+    right: 10px;
+    bottom: 10px;
+    border: 2px dashed @text-color;
+    padding: 15px;
+}
+
+.inventory-list {
+    padding:0px;
+    margin:0px;
+}
+
+.inventory-item {
+    list-style:none;
+}
+
+.hidden {
+    display:none;
+}

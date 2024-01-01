@@ -1,6 +1,7 @@
 import {markdownLoader} from "./markdown-loader.js"
 import { fakeLink, onClick as onFakeLinkClick } from "./markedExtensions/fakeLink.js"
 import { ajax } from "./helpers/ajax.js"
+import { inventory } from "./widgets/inventory.js"
 
 import { subtleMusicPlayer } from "./elements/subtleMusicPlayer.js"
 
@@ -35,3 +36,5 @@ onFakeLinkClick((href)=>{
         }
     });
 });
+
+inventory.renderInventory();
