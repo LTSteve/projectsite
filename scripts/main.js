@@ -12,6 +12,11 @@ window.onpopstate = ()=>{
 };
 
 onFakeLinkClick((href)=>{
+    if(href.startsWith("#")){
+        window.dispatchEvent(new Event(href.substring(1)));
+        return;
+    }
+
     console.log("loading md " + href);
     markdownLoader.loadMD(href).then(()=>{
         history.pushState({subPage:href},href);

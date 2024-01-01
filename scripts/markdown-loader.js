@@ -1,5 +1,6 @@
 import { marked } from "https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js";
 import { ajax } from "./helpers/ajax.js";
+import { setInnerHTML } from "./helpers/setInnerHtml.js"
 
 const ARTICLES_URL = "/articles/";
 
@@ -31,7 +32,7 @@ const _markdownLoader = (()=>{
         mdFileName = mdFileName || contentSettings.main_article;
         return ajax.get(ARTICLES_URL + mdFileName, true)
             .then((text)=>{
-                markdownContainer.innerHTML = marked.parse(text);
+                setInnerHTML(markdownContainer, marked.parse(text));
                 currentMarkdownFile = mdFileName;
                 for(const extension of loaderExtensions){
                     extension.apply(markdownContainer);
