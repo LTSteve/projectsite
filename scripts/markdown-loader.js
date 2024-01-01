@@ -8,12 +8,16 @@ const _markdownLoader = (()=>{
     let contentSettingsUrl = markdownContainer.getAttribute('data-markdown-load');
     let contentSettings = {}
     let currentMarkdownFile = "";
+    let loaderExtensions = []
 
-    let initialize = (extensions)=>{
-        if (extensions){
-            for(const extension of extensions){
+    let initialize = (markedExtensions, loaderExt)=>{
+        if (markedExtensions){
+            for(const extension of markedExtensions){
                 marked.use({renderer: extension})
             }
+        }
+        if (loaderExtensions){
+            loaderExtensions = loaderExt;
         }
         ajax.get(contentSettingsUrl, false)
             .then((json)=>{
@@ -29,6 +33,9 @@ const _markdownLoader = (()=>{
             .then((text)=>{
                 markdownContainer.innerHTML = marked.parse(text);
                 currentMarkdownFile = mdFileName;
+                for(const extension of loaderExtensions){
+                    extension.apply(markdownContainer);
+                }
             });
     }
     return {
