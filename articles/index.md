@@ -5,7 +5,7 @@ This is a freeform space for me to blog, shitpost, create
 
 *Plans are still up in the air for this site, but check back often, whatever I do project-wise should be ending up on here in some form*
 
-[Today's ramble](rambles/01_04_2024.md)
+[Today's ramble](rambles/01_05_2024.md)
 [Broken Link](asdf/12_31_2023.md)
 [An embeded Godot game?](goblin_camp.md)
 
