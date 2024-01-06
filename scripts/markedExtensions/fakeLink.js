@@ -3,11 +3,21 @@ let _general_callback = (href)=>{
     document.location = href;
 };
 
+const HIDDEN_TAG = "|hidden|";
+const HIDDEN_TAG_LENGTH = 8;
+
 const fakeLink = {
     link(href,title,text) {
+        let isHidden = false;
+        if(href.startsWith(HIDDEN_TAG)){
+            href = href.substring(8);
+            isHidden = true;
+        }
+
         title = title || href || text;
+
         return `
-            <span class="fake-link" title="${title}" onClick="FakeLinkClick('${href}')">${text}</span>
+            <span class="fake-link${isHidden ? " hidden-link" : " "}" title="${title}" onClick="FakeLinkClick('${href}')" tabindex="0">${text}</span>
             `;
     }
 };

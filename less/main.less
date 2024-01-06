@@ -43,6 +43,15 @@ a,.fake-link {
 a:hover, .fake-link:hover{
     color: @highlight-color;
 }
+
+a.hidden-link,.fake-link.hidden-link {
+    color: @background-color;
+}
+
+a.hidden-link:focus,.fake-link.hidden-link:focus {
+    color: @highlight-color;
+}
+
 code {
     border: 2px dashed @error-color;
     padding: 20px;
